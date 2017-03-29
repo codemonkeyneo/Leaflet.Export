@@ -181,6 +181,8 @@
             }
             ctx.fillText(caption.text,x , y);
           }
+          
+          _this.invalidateSize(); // added just to give it a shake which seems to make sure that the tiles are rendered
 
 //           document.body.appendChild(canvas);
           var ret = format === 'canvas' ? canvas : { data:canvas.toDataURL(format), width: canvas.width,  height: canvas.height, type: format};
